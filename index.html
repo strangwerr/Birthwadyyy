@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10090d">
+  <meta name="description" content="A little birthday surprise for Swara.">
+  <title>for swara ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <button class="music-toggle" id="musicToggle" aria-pressed="false" title="Toggle background music">♫ <span>music off</span></button>
+  <audio id="bgMusic" loop preload="none"><source src="assets/until-i-found-you.mp3" type="audio/mpeg"></audio>
+
+  <main class="site-shell">
+    <section class="screen active" id="home" aria-labelledby="homeTitle">
+      <p class="eyebrow">A LITTLE SOMETHING, JUST FOR YOU</p>
+      <div class="ornament" aria-hidden="true">✦ &nbsp; ♡ &nbsp; ✦</div>
+      <h1 id="homeTitle">happy birthday,<br><em>swara.</em></h1>
+      <p class="intro">A tiny corner of the internet, made with care<br class="desktop-only"> and a little bit of midnight magic.</p>
+      <button class="primary-btn" id="beginBtn">open your surprise <span>↗</span></button>
+      <div class="home-cat-wrap">
+        <button class="cat-button" id="catButton" aria-label="Tap the black cat to hear a meow">
+          <svg class="cat-svg" viewBox="0 0 150 150" role="img" aria-label="A little black cat">
+            <path d="M35 65 29 27 57 45 Q75 37 94 45 L121 26 115 66 Q128 83 119 105 Q109 130 76 130 Q42 130 31 106 Q22 84 35 65Z" fill="#050506" stroke="#392029" stroke-width="2"/>
+            <path d="M43 51 38 37 53 47 M101 47 113 37 109 53" fill="#7d2638"/>
+            <ellipse cx="55" cy="77" rx="5" ry="8" fill="#d9a3a0"/><ellipse cx="96" cy="77" rx="5" ry="8" fill="#d9a3a0"/>
+            <path d="M70 91 Q75 97 80 91 Q75 88 70 91Z" fill="#a94a5c"/><path d="M75 96 Q69 104 63 98 M75 96 Q81 104 87 98" fill="none" stroke="#a94a5c" stroke-width="2" stroke-linecap="round"/>
+            <path d="M46 94 18 89 M46 101 19 106 M104 94 132 89 M104 101 131 106" stroke="#6f5960" stroke-width="1.5"/>
+            <path d="M112 116 Q141 111 132 88" fill="none" stroke="#050506" stroke-width="13" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-hint">tap me ♡</span>
+        </button>
+      </div>
+      <p class="tiny-note">psst… the cat likes attention.</p>
+    </section>
+
+    <section class="screen" id="cakeScreen" aria-labelledby="cakeTitle">
+      <button class="back-btn" data-back="home">← back</button>
+      <p class="eyebrow">MAKE A WISH</p>
+      <h2 id="cakeTitle">one little cake<br><em>for you.</em></h2>
+      <p class="section-copy">Tap the cake a few times to cut it. Make a wish first.</p>
+      <button class="cake-stage" id="cakeButton" aria-label="Tap to cut the birthday cake">
+        <span class="candle"><i class="flame" id="flame"></i></span>
+        <span class="cake-top"></span><span class="cake-body"></span><span class="cake-plate"></span>
+        <span class="cake-slice" id="cakeSlice"></span>
+      </button>
+      <p class="interaction-hint" id="cakeHint">tap the cake · 0 / 3</p>
+      <button class="primary-btn hidden" id="toGiftsBtn">find your gifts <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="giftScreen" aria-labelledby="giftTitle">
+      <button class="back-btn" data-back="cakeScreen">← back</button>
+      <p class="eyebrow">PICK A LITTLE GIFT</p>
+      <h2 id="giftTitle">three things,<br><em>from the heart.</em></h2>
+      <p class="section-copy">Choose any envelope or memory. You can come back for the others.</p>
+      <div class="gift-grid">
+        <button class="gift-card" data-gift="letter1"><span class="gift-icon">✉</span><span class="gift-name">a little letter</span><span class="gift-sub">open when ready</span></button>
+        <button class="gift-card" data-gift="photo"><span class="gift-icon">▧</span><span class="gift-name">a little memory</span><span class="gift-sub">photo placeholder</span></button>
+        <button class="gift-card" data-gift="letter2"><span class="gift-icon">♡</span><span class="gift-name">one more thing</span><span class="gift-sub">from me to you</span></button>
+      </div>
+      <button class="text-btn" data-back="home">return to the beginning ↗</button>
+    </section>
+
+    <section class="screen" id="letter1" aria-labelledby="letter1Title">
+      <button class="back-btn" data-back="giftScreen">← all gifts</button>
+      <article class="letter-paper"><p class="eyebrow">LETTER NO. 01</p><h2 id="letter1Title">dear swara,</h2><p>Happy birthday, you. ♡</p><p>I hope this new year of your life brings you soft mornings, loud laughter, kind people, and little moments that make you feel glad to be here.</p><p>Even if life looks different now, I’m still grateful for the parts of it that let our paths cross. You deserve so much warmth and happiness—today and on all the ordinary days after it.</p><p class="signature">with care, always</p></article>
+      <button class="primary-btn" data-back="giftScreen">back to your gifts <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="photo" aria-labelledby="photoTitle">
+      <button class="back-btn" data-back="giftScreen">← all gifts</button>
+      <p class="eyebrow">A PLACE FOR A MEMORY</p><h2 id="photoTitle">one day,<br><em>one moment.</em></h2>
+      <div class="photo-placeholder"><span class="photo-symbol">♡</span><p>Your photo goes here</p><small>Add your image as <code>assets/our-photo.jpg</code><br>and this space will show it.</small><img id="memoryPhoto" src="assets/our-photo.jpg" alt="A memory with Swara" hidden></div>
+      <button class="primary-btn" data-back="giftScreen">back to your gifts <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="letter2" aria-labelledby="letter2Title">
+      <button class="back-btn" data-back="giftScreen">← all gifts</button>
+      <article class="letter-paper final-letter"><p class="eyebrow">LETTER NO. 03</p><h2 id="letter2Title">if I could wish<br><em>for one thing…</em></h2><p>I’d wish you a life that feels gentle. A life full of people who show up for you, days that surprise you in good ways, and reasons to smile that you never have to search too hard for.</p><p>And if I’m being honest, there’s something I still carry quietly: <strong>I miss our friendship, and I wish things were different.</strong> I miss what we had, and I wish life had taken a softer turn for us. I don’t say that to ask anything of you—only because some connections stay meaningful, even when things change.</p><p>Today is about you, and I hope it’s beautiful. Happy birthday, Swara. Take care of your heart.</p><p class="signature">with love for the memories, <span>♡</span></p></article>
+      <button class="primary-btn" data-back="home">one last time, home <span>↗</span></button>
+    </section>
+
+    <footer>made with a little tenderness <span>♥</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
